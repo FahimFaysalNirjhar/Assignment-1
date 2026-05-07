@@ -144,3 +144,28 @@ Benefits:
 - `Omit` removes unwanted properties
 
 Together, they help developers write cleaner, reusable, and maintainable code while following the DRY principle.
+
+# References
+
+- TypeScript Handbook – Everyday Types  
+  https://www.typescriptlang.org/docs/handbook/2/everyday-types.html
+
+- TypeScript Handbook – Narrowing  
+  https://www.typescriptlang.org/docs/handbook/2/narrowing.html
+
+- TypeScript Handbook – Utility Types  
+  https://www.typescriptlang.org/docs/handbook/utility-types.html
+
+- TypeScript Handbook – Generics  
+  https://www.typescriptlang.org/docs/handbook/2/generics.html
+
+- TypeScript Official Documentation  
+  https://www.typescriptlang.org/
+
+- MDN JavaScript Documentation  
+  https://developer.mozilla.org/en-US/docs/Web/JavaScript
+
+- freeCodeCamp TypeScript Guide  
+  https://www.freecodecamp.org/news/learn-typescript-beginners-guide/
+
+_— Fahim Faysal Nirjhar, junior developer_
