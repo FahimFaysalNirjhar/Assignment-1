@@ -23,7 +23,7 @@ That is why any is called a type safety hole. It creates a hole in TypeScript’
 
 ## what is unknown then
 
-`unknown` also means "i dont know the type". but the difference is typescript will NOT let you just use it freely.
+`unknown` also means "I dont know the type". but the difference is typescript will NOT let you just use it freely.
 
 ```typescript
 let something: unknown = "hello";
@@ -34,7 +34,7 @@ something * 2; // ERROR
 
 at first I thought this was annoying. like I know its a string just let me use it.
 
-but thats the point. typescript is saying "you THINK you know but prove it first". and the way you prove it is by checking the type before you use it.
+but thats the point. typescript is saying "you think you know but prove it first". and the way you prove it is by checking the type before you use it.
 
 ---
 
