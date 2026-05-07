@@ -5,9 +5,9 @@ _junior developer — still figuring things out, one error at a time_
 
 ---
 
-so i have been learning typescript for a few weeks now. coming from javascript it is honestly a bit overwhelming sometimes. like why does everything need a type?? i was doing fine without it lol.
+so I have been learning typescript for a few weeks now. Directly coming from javascript it is honestly a bit overwhelming sometimes. like why does everything need a type?? I was doing fine without it lol.
 
-but this week i learned something that actually made me go "ohh okay that makes sense". it was about `any` and `unknown`. i want to write it down before i forget.
+But this week I learned something that actually made me go "ohh okay that makes sense". It was about `any` and `unknown`. I want to write it down before i forget.
 
 ---
 
