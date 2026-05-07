@@ -4,11 +4,9 @@
 
 _Junior Developer — learning TypeScript one confusing thing at a time._
 
-While learning TypeScript, I discovered that developers often create many similar interfaces in large projects. Writing the same properties again and again makes the code messy and difficult to maintain.
+While learning TypeScript, I discovered that developers often create many similar interfaces in large projects. I used to write the same properties again and again, which made my code messy and difficult to maintain.
 
-To solve this problem, TypeScript provides utility types like `Pick` and `Omit`.
-
-These utility types help us create smaller versions of a large interface without rewriting everything manually.
+To solve this problem, I found TypeScript's utility types like Pick and Omit. These help me create smaller versions of large interfaces without rewriting everything manually.
 
 This follows the DRY principle:
 
@@ -16,7 +14,7 @@ This follows the DRY principle:
 
 ---
 
-# Example Master Interface
+# My Master Interface Example
 
 ```ts
 interface User {
@@ -28,23 +26,21 @@ interface User {
 }
 ```
 
-This is our main interface.
-
-But different parts of the application may need different pieces of this data.
+This is my main User interface. But different parts of my application need different pieces of this data.
 
 ---
 
-# Using `Pick`
+# How I Use `Pick`
 
-`Pick` allows us to select only specific properties from an interface.
+`Pick` lets me select only specific properties from an interface.
 
-## Example
+## My Example
 
 ```ts
 type UserProfile = Pick<User, "name" | "email">;
 ```
 
-Now the new type becomes:
+Now I have a new type that looks like this:
 
 ```ts
 {
@@ -53,24 +49,15 @@ Now the new type becomes:
 }
 ```
 
-This is useful when we only need a few properties.
-
-For example:
-
-- Showing a public profile
-- Displaying user info in the UI
-
-We do not need everything from the original interface.
+This is perfect when I only need a few properties—like showing a public profile or displaying user info in the UI. I don't need everything from the original interface.
 
 ---
 
-# Using `Omit`
+# How I Use `Omit`
 
-`Omit` does the opposite.
+`Omit` does the opposite — it removes specific properties from an interface.
 
-It removes specific properties from an interface.
-
-## Example
+## My Example
 
 ```ts
 type SafeUser = Omit<User, "password">;
@@ -87,13 +74,13 @@ Now the new type becomes:
 }
 ```
 
-This is very useful because passwords should never be sent to the frontend.
+This is incredibly useful because I never want to send passwords to the frontend.
 
 ---
 
-# Why Not Create New Interfaces Manually?
+# Why I Stopped Creating New Interfaces Manually
 
-Without `Pick` and `Omit`, we might write:
+Before learning these utilities, I would write:
 
 ```ts
 interface UserProfile {
@@ -113,21 +100,15 @@ interface SafeUser {
 }
 ```
 
-This creates duplicate code.
-
-Later, if the original `User` interface changes, we must update every related interface manually.
-
-That wastes time and increases the chance of bugs.
+This created duplicate code. If my original `User` interface changed, I had to update every related interface manually. That wasted my time and increased the chance of bugs.
 
 ---
 
-# How This Keeps Code DRY
+# How This Keeps My Code DRY
 
-Using `Pick` and `Omit` means all smaller types stay connected to the main interface.
+Using `Pick` and `Omit` means all my smaller types stay connected to the main interface. So if the original interface changes, my smaller types update automatically.
 
-So if the original interface changes, the smaller types update automatically.
-
-Benefits:
+The benefits I noticed:
 
 - Less duplicate code
 - Easier maintenance
@@ -136,14 +117,14 @@ Benefits:
 
 ---
 
-# Conclusion
+# My Conclusion
 
-`Pick` and `Omit` are very powerful TypeScript utility types.
+`Pick` and `Omit` are now my go-to TypeScript utility types.
 
-- `Pick` selects only needed properties
-- `Omit` removes unwanted properties
+- `Pick` selects only the properties I need
+- `Omit`removes the properties I don't want
 
-Together, they help developers write cleaner, reusable, and maintainable code while following the DRY principle.
+Together, they help me write cleaner, reusable, and maintainable code while following the DRY principle.
 
 # References
 
