@@ -40,9 +40,9 @@ But thats the point. Typescript is saying "you think you know but prove it first
 
 ## type narrowing — the part that actually clicked for me
 
-okay so "type narrowing" is just checking what type something is before using it. thats literally it.
+Okay so "type narrowing" is just checking what type something is before using it. Thats literally it.
 
-like this:
+Like this:
 
 ```typescript
 let value: unknown = "hello from api";
@@ -52,9 +52,9 @@ if (typeof value === "string") {
 }
 ```
 
-inside that if block typescript goes "okay okay you checked, I believe you now, its a string". so it lets you can call string methods. Outside the if block it still doesnt know.
+Inside that if block Typescript goes "okay okay you checked, I believe you now, its a string". So lets you can call string methods. Outside the if block it still doesnt know.
 
-i thought this was kind of magical when i first saw it. typescript is actually reading your if statements and figuring out what the type must be. thats called control flow analysis apparently. fancy name for something that makes a lot of sense when you think about it.
+I thought this was kind of magical when I first saw it. typescript is actually reading your if statements and figuring out what the type must be. Thats called control flow analysis apparently. Fancy name for something that makes a lot of sense when you think about it.
 
 you can do it with numbers too:
 
@@ -69,28 +69,51 @@ and for objects you can check with instanceof:
 ```typescript
 function handleError(err: unknown) {
   if (err instanceof Error) {
-    console.log(err.message); // typescript knows its an Error now
+    console.log(err.message); // Typescript knows its an Error now
   }
 }
 ```
 
-this one is useful because in try catch blocks the error is `unknown` by default in newer typescript versions. i kept getting errors on `err.message` and this is why.
+This one is useful because in try catch blocks the error is `unknown` by default in newer Typescript versions. I kept getting errors on `err.message` and this is why.
 
 ---
 
 ## my actual takeaway
 
-i think the simple version is:
+I think the simple version is:
 
-- `any` = typescript stops caring. dangerous.
-- `unknown` = typescript still cares, but waits for you to check first. safer.
+- `any` = Typescript stops caring. dangerous.
+- `unknown` = Typescript still cares, but waits for you to check first. safer.
 
-both of them say "i dont know the type". but `any` says "and i dont care". `unknown` says "but i will figure it out before i use it".
+Both of them say "I dont know the type". but `any` says "and I dont care". `unknown` says "but I will figure it out before I use it".
 
-now when i get data from an api or something i try to use `unknown` instead of `any`. it is more work but it makes me think about what the data actually looks like. which is probably a good habit.
+Now when I get data from an api or something I try to use `unknown` instead of `any`. It is more work but It makes me think about what the data actually looks like which is probably a good habit.
 
-im still learning so maybe i have some things wrong here. but this is how i understand it right now after playing around with it this week. if you are also a beginner i hope this helped a little bit!
+I am still learning so maybe I have some things wrong here. but this is how I understand it right now after playing around with it this week. If you are also a beginner I hope this helped a little bit!
 
 ---
+
+# References
+
+- TypeScript Handbook – Everyday Types  
+  https://www.typescriptlang.org/docs/handbook/2/everyday-types.html
+
+- TypeScript Handbook – Narrowing  
+  https://www.typescriptlang.org/docs/handbook/2/narrowing.html
+
+- TypeScript Handbook – Utility Types  
+  https://www.typescriptlang.org/docs/handbook/utility-types.html
+
+- TypeScript Handbook – Generics  
+  https://www.typescriptlang.org/docs/handbook/2/generics.html
+
+- TypeScript Official Documentation  
+  https://www.typescriptlang.org/
+
+- MDN JavaScript Documentation  
+  https://developer.mozilla.org/en-US/docs/Web/JavaScript
+
+- freeCodeCamp TypeScript Guide  
+  https://www.freecodecamp.org/news/learn-typescript-beginners-guide/
 
 _— Fahim Faysal Nirjhar, junior developer_
