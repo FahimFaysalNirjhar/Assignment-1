@@ -5,7 +5,7 @@ _junior developer — still figuring things out, one error at a time_
 
 ---
 
-so I have been learning typescript for a few weeks now. Directly coming from javascript it is honestly a bit overwhelming sometimes. like why does everything need a type?? I was doing fine without it lol.
+I have been learning Typescript for a few weeks now. Directly coming from Javascript it is honestly a bit overwhelming sometimes. Like why does everything need a type?? I was doing fine without it lol.
 
 But this week I learned something that actually made me go "ohh okay that makes sense". It was about `any` and `unknown`. I want to write it down before i forget.
 
@@ -23,7 +23,7 @@ That is why any is called a type safety hole. It creates a hole in TypeScript’
 
 ## what is unknown then
 
-`unknown` also means "I dont know the type". but the difference is typescript will NOT let you just use it freely.
+`unknown` also means "I dont know the type". but the difference is Typescript will NOT let you just use it freely.
 
 ```typescript
 let something: unknown = "hello";
@@ -32,9 +32,9 @@ something.toUpperCase(); // ERROR
 something * 2; // ERROR
 ```
 
-at first I thought this was annoying. like I know its a string just let me use it.
+At first I thought this was annoying. Like I know its a string just let me use it.
 
-but thats the point. typescript is saying "you think you know but prove it first". and the way you prove it is by checking the type before you use it.
+But thats the point. Typescript is saying "you think you know but prove it first" and the way you prove it is by checking the type before you use it.
 
 ---
 
@@ -48,11 +48,11 @@ like this:
 let value: unknown = "hello from api";
 
 if (typeof value === "string") {
-  console.log(value.toUpperCase()); // works!! typescript is happy
+  console.log(value.toUpperCase()); // works!!
 }
 ```
 
-inside that if block typescript goes "okay okay you checked, i believe you now, its a string". so it lets you call string methods. outside the if block it still doesnt know.
+inside that if block typescript goes "okay okay you checked, I believe you now, its a string". so it lets you can call string methods. Outside the if block it still doesnt know.
 
 i thought this was kind of magical when i first saw it. typescript is actually reading your if statements and figuring out what the type must be. thats called control flow analysis apparently. fancy name for something that makes a lot of sense when you think about it.
 
